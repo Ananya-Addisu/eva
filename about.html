@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVA International College - About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmNWM1YyIgZD0iTTEyIDJMMSA5bDMgM3YzaDEuN3YtNC41YzAtNC4zIDEuNS03LjcgNi4zLTcuN3M2LjMgMy40IDYuMyA3Ljd2NC41aDE3di0zbDMtM2wtMTEtN3ptM3YxNGMwIDEuMS0uOSAyLTIgMnMtMi0uOS0yLTJ2LTRoNHY0eiIvPjwvc3ZnPg==" type="image/svg+xml">
+<style type="text/css">
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #000000;
+    --text-color: #ffffff;
+    --highlight-color: #ff5c5c;
+    --link-color: #ff8c8c;
+    --icon-color: #ff3333;
+    --section-bg: rgba(0, 0, 0, 0.7);
+    --section-border: rgba(255, 92, 92, 0.3);
+    --logo-glow: #ff6600;
+    --input-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?university,campus') no-repeat center center/cover;
+    margin-bottom: 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-content {
+    padding: 2rem;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+main {
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+    background-color: var(--section-bg);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    border-bottom: 2px solid var(--section-border);
+    padding-bottom: 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+}
+
+.vision-mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mission-card, .vision-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid var(--section-border);
+}
+
+.mission-card h3, .vision-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+    text-align: center;
+}
+
+.mission-card::before, .vision-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 5rem;
+    color: var(--highlight-color);
+    opacity: 0.2;
+    line-height: 1;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.member-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--section-border);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.member-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    background-color: var(--highlight-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.member-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: var(--highlight-color);
+}
+
+.member-role {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--highlight-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.timeline-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--highlight-color);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+    transform: translateX(50px);
+}
+
+.right.timeline-visible {
+    transform: translateX(0);
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--highlight-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--highlight-color);
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--highlight-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--highlight-color) transparent transparent;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid var(--section-border);
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+.stats-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--section-border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.stat-card.stat-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--highlight-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--highlight-color);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--highlight-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--highlight-color);
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .vision-mission-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-container::before {
+        left: 60px;
+        border: medium solid var(--highlight-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--highlight-color) transparent transparent;
+    }
+    
+    .left::after, .right::after {
+        left: 15px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navigation">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L1 9l3 3v3h1.7v-4.5c0-4.3 1.5-7.7 6.3-7.7s6.3 3.4 6.3 7.7v4.5h1.7v-3l3-3-11-7zm3 14c0 1.1-.9 2-2 2s-2-.9-2-2v-4h4v4z"/>
+            </svg>
+            <span>EVA International College</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="loginLink">Login</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="header-content">
+        <h1>About Us</h1>
+        <p class="subtitle">Learn more about our mission, history, and the team behind EVA International College</p>
+    </div>
+</header>
+
+<main>
+    <section class="content-section" id="story-section">
+        <h2>Our Story</h2>
+        <p>EVA International College was founded in 2020 with a simple mission: to transform the way students interact with their academic environment. What began as a small project developed by a group of passionate educators and technologists has grown into a comprehensive institution serving thousands of students across the country.</p>
+        <p>Our team recognized the challenges faced by students navigating complex university systems and saw an opportunity to streamline these processes through technology. By centralizing resources, simplifying administrative tasks, and fostering community, we've created a solution that enhances the educational experience for everyone involved.</p>
+        
+        <div class="vision-mission-section">
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>To empower students and educators through innovative technological solutions that simplify academic processes, foster collaboration, and enhance the overall educational experience.</p>
+            </div>
+            <div class="vision-card">
+                <h3>Our Vision</h3>
+                <p>To become the leading educational institution that transforms how students engage with their academic journey, making education more accessible, efficient, and rewarding.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="history-section">
+        <h2>Our History</h2>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <div class="timeline-year">2020</div>
+                    <h3>The Beginning</h3>
+                    <p>EVA International College was founded by a group of educators and tech specialists who saw the need for a more integrated approach to academic management.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <div class="timeline-year">2021</div>
+                    <h3>Initial Growth</h3>
+                    <p>Our institution was recognized for its innovative approach to education, serving over 500 students across multiple programs.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <div class="timeline-year">2022</div>
+                    <h3>Expanding Programs</h3>
+                    <p>We introduced our flagship programs in Business Management, Software Engineering, and Hotel Management to better serve our growing student base.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023</div>
+                    <h3>National Recognition</h3>
+                    <p>EVA International College received national recognition for innovation in educational technology, including the prestigious EdTech Impact Award.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <div class="timeline-year">2025</div>
+                    <h3>Going Global</h3>
+                    <p>Today, we're expanding our reach internationally, bringing our educational programs to students around the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="team-section">
+        <h2>Meet Our Team</h2>
+        <p>Behind EVA International College is a dedicated team of educators, technologists, and visionaries committed to transforming education through technology.</p>
+        
+        <div class="team-members">
+            <div class="member-card">
+                <div class="member-picture">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sara Dubale" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+                </div>
+                <h3 class="member-name">Dr. Sara Dubale</h3>
+                <div class="member-role">President & Co-Founder</div>
+                <p>Former university professor with 15 years of experience in education administration and technology integration.</p>
+            </div>
+            <div class="member-card">
+                <div class="member-picture">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Aron Yitagesu" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+                </div>
+                <h3 class="member-name">Aron Yitagesu</h3>
+                <div class="member-role">CTO & Co-Founder</div>
+                <p>Software engineer with a passion for educational technology and over a decade of experience in platform development.</p>
+            </div>
+            <div class="member-card">
+                <div class="member-picture">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Dr. Andargachew Demlew" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+                </div>
+                <h3 class="member-name">Dr. Andargachew Demlew</h3>
+                <div class="member-role">Head of Academic Affairs</div>
+                <p>Leads our research initiatives to ensure our programs align with the latest educational methodologies and industry needs.</p>
+            </div>
+            <div class="member-card">
+                <div class="member-picture">
+                    <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Tewodros Kebede" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+                </div>
+                <h3 class="member-name">Tewodros Kebede</h3>
+                <div class="member-role">Dean of Students</div>
+                <p>Dedicated to creating a supportive and enriching student experience that fosters both academic and personal growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="impact-section">
+        <h2>Our Impact</h2>
+        <p>Since our founding, EVA International College has made a significant impact on the educational landscape, helping students and institutions thrive in the digital age.</p>
+        
+        <div class="stats-numbers">
+            <div class="stat-card">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Partner Organizations</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3,500+</div>
+                <div class="stat-label">Alumni Worldwide</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Employment Rate</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="notification" id="notification"></div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+                <li><a href="#">Business Management</a></li>
+                <li><a href="#">Software Engineering</a></li>
+                <li><a href="#">Hotel Management</a></li>
+                <li><a href="#">International Business</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>123 Education Avenue</li>
+                <li>University City, UC 12345</li>
+                <li>Email: info@evainternationalcollege.edu</li>
+                <li>Phone: (123) 456-7890</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 EVA International College. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const loginLink = document.getElementById('loginLink');
+        const notification = document.getElementById('notification');
+        const sections = document.querySelectorAll('.content-section');
+        const timelineContainers = document.querySelectorAll('.timeline-container');
+        const statCards = document.querySelectorAll('.stat-card');
+        
+        // Check for scroll position and animate elements
+        function checkScroll() {
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('section-visible');
+                }
+            });
+            
+            timelineContainers.forEach(container => {
+                const containerTop = container.getBoundingClientRect().top;
+                
+                if (containerTop < triggerBottom) {
+                    container.classList.add('timeline-visible');
+                }
+            });
+            
+            statCards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                
+                if (cardTop < triggerBottom) {
+                    setTimeout(() => {
+                        card.classList.add('stat-visible');
+                    }, index * 150);
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        checkScroll(); // Check on initial load
+        
+        if (currentUser) {
+            loginLink.textContent = 'Logout';
+            loginLink.href = '#';
+            loginLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                showNotification('Logged out successfully!');
+                
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 1500);
+            });
+        }
+        
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    });
+</script>
+</body>
+</html> 

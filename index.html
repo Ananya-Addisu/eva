@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVA International College - Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmNWM1YyIgZD0iTTEyIDJMMSA5bDMgM3YzaDEuN3YtNC41YzAtNC4zIDEuNS03LjcgNi4zLTcuN3M2LjMgMy40IDYuMyA3Ljd2NC41aDE3di0zbDMtM2wtMTEtN3ptM3YxNGMwIDEuMS0uOSAyLTIgMnMtMi0uOS0yLTJ2LTRoNHY0eiIvPjwvc3ZnPg==" type="image/svg+xml">
+<style type="text/css">
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #000000;
+    --text-color: #ffffff;
+    --highlight-color: #ff5c5c;
+    --link-color: #ff8c8c;
+    --icon-color: #ff3333;
+    --section-bg: rgba(0, 0, 0, 0.7);
+    --section-border: rgba(255, 92, 92, 0.3);
+    --logo-glow: #ff6600;
+    --input-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+    margin-bottom: 0;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    background-attachment: fixed;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-content {
+    padding: 2rem;
+    max-width: 900px;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 92, 92, 0.4);
+}
+
+.cta-button:hover {
+    background-color: var(--link-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 92, 92, 0.5);
+}
+
+main {
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto 3rem auto;
+    max-width: 800px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-section {
+    background-color: var(--section-bg);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: translateY(0);
+    display: block !important;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    border-bottom: 2px solid var(--section-border);
+    padding-bottom: 0.5rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--section-border);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.feature-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--highlight-color);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.profile-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.profile-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--section-border);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    background-color: var(--highlight-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--section-border);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.course-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--section-border);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.course-image {
+    height: 150px;
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+.course-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-color), transparent);
+    opacity: 0.7;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--highlight-color);
+}
+
+.course-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.course-button {
+    display: inline-block;
+    background-color: rgba(255, 92, 92, 0.2);
+    color: var(--highlight-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--highlight-color);
+}
+
+.course-button:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--highlight-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--highlight-color);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--highlight-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--highlight-color);
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.user-button:hover {
+    color: var(--highlight-color);
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+    border: 1px solid var(--section-border);
+}
+
+.user-dropdown.show {
+    display: block;
+}
+
+.user-dropdown-item {
+    padding: 0.7rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.user-dropdown-item:hover {
+    background-color: rgba(255, 92, 92, 0.1);
+    color: var(--highlight-color);
+}
+
+.user-dropdown-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 0;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    header {
+        height: 60vh;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--section-bg);
+    margin: 5% auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 92, 92, 0.3);
+    border: 1px solid var(--section-border);
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--highlight-color);
+}
+
+.modal-body {
+    padding: 2.5rem;
+}
+
+#modal-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--highlight-color);
+}
+
+.modal-info {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.modal-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.course-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.detail-section ul {
+    list-style: none;
+}
+
+.detail-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-section ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--highlight-color);
+}
+
+.modal-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Pricing section */
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.payment-options {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.payment-option {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.payment-option.active {
+    background-color: var(--highlight-color);
+    box-shadow: 0 2px 10px rgba(255, 92, 92, 0.3);
+}
+
+.pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-plan {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid var(--section-border);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.pricing-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-plan.featured {
+    border: 2px solid var(--highlight-color);
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(255, 92, 92, 0.2);
+}
+
+.pricing-plan.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.plan-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom-left-radius: 10px;
+}
+
+.plan-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--section-border);
+}
+
+.plan-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.plan-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.plan-price .period {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.plan-features {
+    padding: 2rem;
+}
+
+.plan-features ul {
+    list-style: none;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.plan-features li svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--highlight-color);
+    flex-shrink: 0;
+}
+
+.plan-features li.not-included {
+    opacity: 0.5;
+}
+
+.plan-features li.not-included svg {
+    fill: #dc3545;
+}
+
+.plan-footer {
+    padding: 1.5rem 2rem 2rem;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<nav class="navigation">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L1 9l3 3v3h1.7v-4.5c0-4.3 1.5-7.7 6.3-7.7s6.3 3.4 6.3 7.7v4.5h1.7v-3l3-3-11-7zm3 14c0 1.1-.9 2-2 2s-2-.9-2-2v-4h4v4z"/>
+            </svg>
+            <span>EVA International College</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="loginLink">Login</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="header-content">
+        <h1>EVA International College</h1>
+        <p class="subtitle">Your gateway to academic excellence and future success</p>
+        <a href="login.html" class="cta-button" id="headerCta">Get Started</a>
+    </div>
+</header>
+
+<main>
+    <div class="welcome-section">
+        <h2>Welcome to University Portal</h2>
+        <p>Your comprehensive platform for managing your academic journey, connecting with peers, and accessing university resources. Everything you need to succeed in one place.</p>
+    </div>
+
+    <section class="content-section" id="dashboard-section">
+        <h2>Your Dashboard</h2>
+        <div class="profile-section">
+            <div class="profile-card">
+                <div class="profile-picture" id="profile-initial">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYeoJEB7QhNrDC34QBW60qXczjK27o31kTnw&s" alt="Profile Picture">
+                </div>
+                <h3 id="profile-name">Loading...</h3>
+                <p id="profile-email">Loading...</p>
+                <p style="margin-top: 2rem;">Member since <span id="profile-date">Loading...</span></p>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-title">Courses Enrolled</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-title">Assignments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-title">Average Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3.8</div>
+                    <div class="stat-title">GPA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                    </svg>
+                </div>
+                <h3>Course Management</h3>
+                <p>Register for classes, access course materials, and keep track of your academic schedule all in one place.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                    </svg>
+                </div>
+                <h3>Assignments &amp; Grades</h3>
+                <p>Submit assignments online, receive feedback, and monitor your performance with detailed grade tracking.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                <h3>Community</h3>
+                <p>Connect with fellow students, join discussion groups, and collaborate on projects with integrated tools.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                </div>
+                <h3>Analytics</h3>
+                <p>Gain insights into your academic performance with detailed analytics and personalized recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                    </svg>
+                </div>
+                <h3>Mobile Access</h3>
+                <p>Access all features on the go with our mobile-responsive platform that works on any device.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+                    </svg>
+                </div>
+                <h3>Notifications</h3>
+                <p>Stay up-to-date with important announcements, deadlines, and events with real-time notifications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Featured Courses</h2>
+        <div class="courses-grid">
+            <div class="course-card" data-course-id="bus101">
+                <div class="course-image">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; padding:30px; fill:var(--highlight-color); opacity:0.8;">
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2zm-5 4h4v-2h-4v2z"/>
+                    </svg>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">Business Management Fundamentals</h3>
+                    <div class="course-info">BUS101 • Prof. Richards • 3 Credits</div>
+                    <p>Learn core business principles, organizational structure, and management strategies for the modern business environment.</p>
+                    <a href="#" class="course-button">View Course</a>
+                </div>
+            </div>
+            <div class="course-card" data-course-id="swe204">
+                <div class="course-image">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; padding:30px; fill:var(--highlight-color); opacity:0.8;">
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                    </svg>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">Software Engineering Principles</h3>
+                    <div class="course-info">SWE204 • Prof. Kim • 4 Credits</div>
+                    <p>Explore software design patterns, development methodologies, and best practices in modern software engineering.</p>
+                    <a href="#" class="course-button">View Course</a>
+                </div>
+            </div>
+            <div class="course-card" data-course-id="hm110">
+                <div class="course-image">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; padding:30px; fill:var(--highlight-color); opacity:0.8;">
+                        <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>
+                    </svg>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">Hotel Management & Operations</h3>
+                    <div class="course-info">HM110 • Prof. Martinez • 3 Credits</div>
+                    <p>Comprehensive introduction to hospitality industry operations, customer service excellence, and hotel management.</p>
+                    <a href="#" class="course-button">View Course</a>
+                </div>
+            </div>
+            <div class="course-card" data-course-id="ibm220">
+                <div class="course-image">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%; padding:30px; fill:var(--highlight-color); opacity:0.8;">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title">International Business Management</h3>
+                    <div class="course-info">IBM220 • Prof. Chen • 3 Credits</div>
+                    <p>Study global markets, cross-cultural management, and international business strategy in our interconnected world.</p>
+                    <a href="#" class="course-button">View Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="pricing-section">
+        <h2>Tuition & Pricing</h2>
+        <div class="pricing-header">
+            <p>Choose the payment plan that works best for you. All plans include access to our full range of courses and resources.</p>
+            <div class="payment-options">
+                <button class="payment-option active" data-period="monthly">Monthly</button>
+                <button class="payment-option" data-period="semester">Per Semester</button>
+                <button class="payment-option" data-period="annual">Annual</button>
+            </div>
+        </div>
+        
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <div class="plan-header">
+                    <h3>Basic Access</h3>
+                    <div class="plan-price">
+                        <span class="price monthly">1,499 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price semester" style="display: none;">7,499 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price annual" style="display: none;">13,499 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="period">/period</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Access to core curriculum
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Online learning resources
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Basic student support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Digital library access
+                        </li>
+                        <li class="not-included">
+                            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                            Career counseling
+                        </li>
+                        <li class="not-included">
+                            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                            Internship placement
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-footer">
+                    <a href="login.html" class="cta-button">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="pricing-plan featured">
+                <div class="plan-tag">Most Popular</div>
+                <div class="plan-header">
+                    <h3>Premium Package</h3>
+                    <div class="plan-price">
+                        <span class="price monthly">2,999 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price semester" style="display: none;">13,499 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price annual" style="display: none;">26,999 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="period">/period</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Access to all courses
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Advanced learning resources
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Priority student support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Full library access
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Career counseling
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Internship opportunities
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-footer">
+                    <a href="login.html" class="cta-button">Get Started</a>
+                </div>
+            </div>
+            
+            <div class="pricing-plan">
+                <div class="plan-header">
+                    <h3>Full Degree Program</h3>
+                    <div class="plan-price">
+                        <span class="price monthly">5,249 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price semester" style="display: none;">25,499 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="price annual" style="display: none;">44,999 <svg width="0.7em" height="1em" viewBox="0 0 1143 1278" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;"><path d="M738.75 0.0653076C832.888 0.0653076 909.376 17.128 968.213 51.2533C1028.23 84.2019 1072.35 133.036 1100.59 197.757C1128.84 261.301 1142.96 338.965 1142.96 430.75V1278H920.555V439.576C920.555 358.381 906.434 296.603 878.193 254.24C849.951 210.701 801.705 188.931 733.454 188.931C686.385 188.931 649.318 199.522 622.253 220.703C595.188 241.884 575.772 271.303 564.004 308.958C553.414 346.614 548.118 390.741 548.118 441.341V1278H325.715V427.22C325.715 342.495 339.836 268.361 368.078 204.817C397.496 140.097 442.212 90.0856 502.226 54.7836C562.239 18.3048 641.08 0.0653076 738.75 0.0653076Z" fill="currentColor"></path><path d="M726.148 822.07L71.3848 809.729L123.657 926.784L778.421 939.125L726.148 822.07Z" fill="currentColor"></path><path d="M654.763 616.216L0 603.875L52.2726 720.93L707.036 733.271L654.763 616.216Z" fill="currentColor"></path></svg></span>
+                        <span class="period">/period</span>
+                    </div>
+                </div>
+                <div class="plan-features">
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Complete degree program
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            All premium features
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            24/7 dedicated support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Job placement assistance
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            International exchange options
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Industry mentorship
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-footer">
+                    <a href="login.html" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title"></h2>
+                <div class="modal-info" id="modal-info"></div>
+                <div class="modal-description" id="modal-description"></div>
+                
+                <div class="course-details">
+                    <div class="detail-section">
+                        <h3>Course Overview</h3>
+                        <p id="modal-overview"></p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>What You'll Learn</h3>
+                        <ul id="modal-outcomes"></ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Requirements</h3>
+                        <ul id="modal-requirements"></ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Assessment Method</h3>
+                        <ul id="modal-assessment"></ul>
+                    </div>
+                </div>
+                
+                <div class="modal-cta">
+                    <a href="login.html" class="cta-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="notification" id="notification"></div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+                <li><a href="#">Business Management</a></li>
+                <li><a href="#">Software Engineering</a></li>
+                <li><a href="#">Hotel Management</a></li>
+                <li><a href="#">International Business</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>123 Education Avenue</li>
+                <li>University City, UC 12345</li>
+                <li>Email: info@evainternationalcollege.edu</li>
+                <li>Phone: (123) 456-7890</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 EVA International College. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const dashboardSection = document.getElementById('dashboard-section');
+        const loginLink = document.getElementById('loginLink');
+        const headerCta = document.getElementById('headerCta');
+        const notification = document.getElementById('notification');
+        const sections = document.querySelectorAll('.content-section, .welcome-section');
+        const modal = document.getElementById('courseModal');
+        const closeModal = document.querySelector('.close-modal');
+        const courseButtons = document.querySelectorAll('.course-button');
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        
+        document.querySelector('.footer-bottom p').innerHTML = '&copy; 2025 EVA International College. All rights reserved.';
+        
+        sections.forEach(section => {
+            section.classList.add('section-visible');
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+            section.style.display = 'block';
+        });
+        
+        function checkScroll() {
+            sections.forEach(section => {
+                section.classList.add('section-visible');
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+                section.style.display = 'block';
+            });
+        }
+        
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+        
+        const courseData = {
+            'bus101': {
+                title: 'Business Management Fundamentals',
+                info: 'BUS101 • Prof. Richards • 3 Credits',
+                description: 'An essential course that introduces students to the core principles of business management and organizational leadership.',
+                overview: 'This foundational course covers key concepts in business administration, management theory, and organizational behavior. Students will gain a comprehensive understanding of how businesses operate, how to develop management strategies, and how to effectively lead teams in the modern business environment.',
+                outcomes: [
+                    'Understand fundamental business concepts and terminology',
+                    'Develop basic skills in planning, organizing, leading, and controlling',
+                    'Analyze business case studies and propose solutions',
+                    'Apply management principles to solve common business problems',
+                    'Understand organizational structures and their impact on operations',
+                    'Develop effective business communication skills'
+                ],
+                requirements: [
+                    'No prerequisites required',
+                    'Recommended for first-year business students',
+                    'Basic computer literacy skills'
+                ],
+                assessment: [
+                    'Midterm examination (30%)',
+                    'Case study analysis (20%)',
+                    'Group project and presentation (25%)',
+                    'Final examination (25%)'
+                ]
+            },
+            'swe204': {
+                title: 'Software Engineering Principles',
+                info: 'SWE204 • Prof. Kim • 4 Credits',
+                description: 'A comprehensive exploration of software development methodologies, design patterns, and best practices in professional software engineering.',
+                overview: 'This course provides a thorough examination of software development processes, from requirements gathering to deployment and maintenance. Students will learn about various software development methodologies including Agile, Scrum, and Waterfall, as well as software design patterns and architectural principles that contribute to robust, maintainable software systems.',
+                outcomes: [
+                    'Understand the software development lifecycle',
+                    'Apply appropriate design patterns to software problems',
+                    'Create well-documented, maintainable code',
+                    'Implement effective testing strategies',
+                    'Work collaboratively using version control systems',
+                    'Evaluate and select appropriate technologies for projects'
+                ],
+                requirements: [
+                    'Introduction to Programming or equivalent',
+                    'Data Structures and Algorithms',
+                    'Basic understanding of object-oriented programming'
+                ],
+                assessment: [
+                    'Coding assignments (40%)',
+                    'Team project (30%)',
+                    'Technical documentation (15%)',
+                    'Final examination (15%)'
+                ]
+            },
+            'hm110': {
+                title: 'Hotel Management & Operations',
+                info: 'HM110 • Prof. Martinez • 3 Credits',
+                description: 'An introduction to the principles of hospitality management with a focus on hotel operations, guest services, and industry standards.',
+                overview: 'This course provides a foundation in hotel management practices and operations. Students will learn about front office procedures, housekeeping operations, food and beverage management, and the various systems that contribute to successful hotel operations. The course emphasizes both theoretical knowledge and practical skills necessary for careers in the hospitality industry.',
+                outcomes: [
+                    'Understand hotel organizational structures and departments',
+                    'Develop skills in guest service and satisfaction management',
+                    'Apply revenue management principles',
+                    'Analyze operational challenges and implement solutions',
+                    'Understand hospitality industry regulations and standards',
+                    'Develop effective leadership skills for hospitality environments'
+                ],
+                requirements: [
+                    'No prerequisites required',
+                    'Recommended for first-year hospitality students',
+                    'Interest in customer service-oriented careers'
+                ],
+                assessment: [
+                    'Case studies (25%)',
+                    'Midterm examination (20%)',
+                    'Service project (25%)',
+                    'Final examination (30%)'
+                ]
+            },
+            'ibm220': {
+                title: 'International Business Management',
+                info: 'IBM220 • Prof. Chen • 3 Credits',
+                description: 'A globally-focused course examining business practices, cultural considerations, and strategies for successful international business operations.',
+                overview: 'This course explores the unique challenges and opportunities of conducting business in the global marketplace. Students will learn about international trade theories, global market entry strategies, cross-cultural management, and the impact of political, economic, and cultural factors on international business operations. The course provides essential knowledge for careers in international business, trade, and global management.',
+                outcomes: [
+                    'Understand global business environments and market dynamics',
+                    'Analyze cultural differences and their impact on business practices',
+                    'Develop international market entry strategies',
+                    'Evaluate political and economic risks in global business',
+                    'Apply cross-cultural communication techniques',
+                    'Understand international trade regulations and agreements'
+                ],
+                requirements: [
+                    'Business Management Fundamentals',
+                    'Principles of Economics',
+                    'Recommended: Introduction to Marketing'
+                ],
+                assessment: [
+                    'Global market analysis project (30%)',
+                    'Cross-cultural case studies (20%)',
+                    'Group presentation (25%)',
+                    'Final examination (25%)'
+                ]
+            }
+        };
+        
+        courseButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const courseCard = this.closest('.course-card');
+                const courseId = courseCard.dataset.courseId;
+                const course = courseData[courseId];
+                
+                document.getElementById('modal-title').textContent = course.title;
+                document.getElementById('modal-info').textContent = course.info;
+                document.getElementById('modal-description').textContent = course.description;
+                document.getElementById('modal-overview').textContent = course.overview;
+                
+                const outcomesEl = document.getElementById('modal-outcomes');
+                const requirementsEl = document.getElementById('modal-requirements');
+                const assessmentEl = document.getElementById('modal-assessment');
+                
+                outcomesEl.innerHTML = '';
+                course.outcomes.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    outcomesEl.appendChild(li);
+                });
+                
+                requirementsEl.innerHTML = '';
+                course.requirements.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    requirementsEl.appendChild(li);
+                });
+                
+                assessmentEl.innerHTML = '';
+                course.assessment.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    assessmentEl.appendChild(li);
+                });
+                
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const period = this.dataset.period;
+                
+                paymentOptions.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                document.querySelectorAll('.price').forEach(price => {
+                    price.style.display = 'none';
+                });
+                
+                document.querySelectorAll(`.price.${period}`).forEach(price => {
+                    price.style.display = 'inline';
+                });
+                
+                document.querySelectorAll('.period').forEach(periodText => {
+                    if (period === 'monthly') {
+                        periodText.textContent = '/month';
+                    } else if (period === 'semester') {
+                        periodText.textContent = '/semester';
+                    } else {
+                        periodText.textContent = '/year';
+                    }
+                });
+            });
+        });
+
+        if (currentUser) {
+            dashboardSection.style.display = 'block';
+            dashboardSection.style.opacity = '1';
+            dashboardSection.style.transform = 'translateY(0)';
+            
+            document.getElementById('profile-name').textContent = currentUser.name;
+            document.getElementById('profile-email').textContent = currentUser.email;
+            
+            const joinDate = new Date(currentUser.dateJoined);
+            document.getElementById('profile-date').textContent = joinDate.toLocaleDateString();
+            
+            const initials = currentUser.name.split(' ').map(name => name[0]).join('');
+            document.getElementById('profile-initial').textContent = initials;
+            
+            loginLink.textContent = 'Logout';
+            loginLink.href = '#';
+            loginLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                showNotification('Logged out successfully!');
+                
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 1500);
+            });
+            
+            headerCta.textContent = 'View Dashboard';
+            headerCta.href = '#dashboard-section';
+            
+            showNotification('Welcome back, ' + currentUser.name + '!');
+        } else {
+            dashboardSection.style.display = 'none';
+        }
+        
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    });
+</script>
+</body>
+</html> 

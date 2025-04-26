@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVA International College - Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmNWM1YyIgZD0iTTEyIDJMMSA5bDMgM3YzaDEuN3YtNC41YzAtNC4zIDEuNS03LjcgNi4zLTcuN3M2LjMgMy40IDYuMyA3Ljd2NC41aDE3di0zbDMtM2wtMTEtN3ptM3YxNGMwIDEuMS0uOSAyLTIgMnMtMi0uOS0yLTJ2LTRoNHY0eiIvPjwvc3ZnPg==" type="image/svg+xml">
+<style type="text/css">
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #000000;
+    --text-color: #ffffff;
+    --highlight-color: #ff5c5c;
+    --link-color: #ff8c8c;
+    --icon-color: #ff3333;
+    --section-bg: rgba(0, 0, 0, 0.7);
+    --section-border: rgba(255, 92, 92, 0.3);
+    --logo-glow: #ff6600;
+    --input-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    margin-bottom: 0;
+    position: relative;
+}
+
+.header-content {
+    padding: 2rem;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+main {
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.auth-section {
+    background-color: var(--section-bg);
+    border: 1px solid var(--section-border);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    border-bottom: 2px solid var(--section-border);
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--section-border);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: 'Space Grotesk', sans-serif;
+    transition: border-color 0.3s ease;
+    user-select: text;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 10px rgba(255, 92, 92, 0.3);
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 92, 92, 0.3);
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--link-color);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 92, 92, 0.5);
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+.error {
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    visibility: hidden;
+}
+
+.error.visible {
+    visibility: visible;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.navigation {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--highlight-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .auth-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .auth-section {
+        margin: 0 0 1rem 0;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    header {
+        height: 25vh;
+    }
+    
+    .auth-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navigation">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L1 9l3 3v3h1.7v-4.5c0-4.3 1.5-7.7 6.3-7.7s6.3 3.4 6.3 7.7v4.5h1.7v-3l3-3-11-7zm3 14c0 1.1-.9 2-2 2s-2-.9-2-2v-4h4v4z"/>
+            </svg>
+            <span>EVA International College</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="active">Login</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="header-content">
+        <h1>EVA International College</h1>
+        <p class="subtitle">Access your academic resources and tools</p>
+    </div>
+</header>
+
+<main>
+    <div class="auth-container">
+        <section class="auth-section" id="login-section">
+            <h2>Login</h2>
+            <div class="error" id="login-error"></div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up now</a></p>
+            </div>
+        </section>
+
+        <section class="auth-section" id="signup-section" style="display: none;">
+            <h2>Create an Account</h2>
+            <div class="error" id="signup-error"></div>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="show-login">Log in</a></p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div class="notification" id="notification"></div>
+
+<footer>
+    <p>&copy; 2025 EVA International College. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginSection = document.getElementById('login-section');
+        const signupSection = document.getElementById('signup-section');
+        const showSignup = document.getElementById('show-signup');
+        const showLogin = document.getElementById('show-login');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const loginError = document.getElementById('login-error');
+        const signupError = document.getElementById('signup-error');
+        const notification = document.getElementById('notification');
+
+        showSignup.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginSection.style.display = 'none';
+            signupSection.style.display = 'block';
+        });
+
+        showLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            signupSection.style.display = 'none';
+            loginSection.style.display = 'block';
+        });
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                showNotification('Login successful! Redirecting...');
+                
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            } else {
+                loginError.textContent = 'Invalid email or password';
+                loginError.classList.add('visible');
+            }
+        });
+
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirm = document.getElementById('signup-confirm').value;
+            
+            signupError.classList.remove('visible');
+            
+            if (password !== confirm) {
+                signupError.textContent = 'Passwords do not match';
+                signupError.classList.add('visible');
+                return;
+            }
+            
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            
+            if (users.some(u => u.email === email)) {
+                signupError.textContent = 'Email already in use';
+                signupError.classList.add('visible');
+                return;
+            }
+            
+            const newUser = {
+                id: Date.now().toString(),
+                name,
+                email,
+                password,
+                dateJoined: new Date().toISOString()
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            showNotification('Account created successfully! You can now log in.');
+            
+            signupForm.reset();
+            signupSection.style.display = 'none';
+            loginSection.style.display = 'block';
+        });
+        
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    });
+</script>
+</body>
+</html> 
